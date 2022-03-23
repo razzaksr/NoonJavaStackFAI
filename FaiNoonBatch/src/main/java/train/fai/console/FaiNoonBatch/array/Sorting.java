@@ -4,6 +4,22 @@ import java.util.Arrays;
 
 public class Sorting 
 {
+	public void selection(String[] yet)
+	{
+		String third=null;
+		for(int hold=0;hold<yet.length;hold++)
+		{
+			for(int com=hold+1;com<yet.length;com++)
+			{
+				if(yet[hold].compareTo(yet[com])>0)
+				{
+					third=yet[hold];
+					yet[hold]=yet[com];
+					yet[com]=third;
+				}
+			}
+		}
+	}
 	public void bubble(String[] ar)
 	{
 		String third=null;
@@ -22,10 +38,13 @@ public class Sorting
 	}
 	public static void main(String[] args) 
 	{
-		String[] autokar= {"Silviya","Anu","Prabakaran","Razak Mohamed S","Gowtham","Nanda","Gopi","Madhesh","Kishore"};
-		System.out.println("Before bubble: \n"+Arrays.toString(autokar));
 		Sorting order=new Sorting();
-		order.bubble(autokar);
-		System.out.println("After bubble: \n"+Arrays.toString(autokar));
+		String[] autokar= {"Silviya","Anu","Prabakaran","Razak Mohamed S","Gowtham","Nanda","Gopi","Madhesh","Kishore"};
+//		System.out.println("Before bubble: \n"+Arrays.toString(autokar));
+//		order.bubble(autokar);
+//		System.out.println("After bubble: \n"+Arrays.toString(autokar));
+		System.out.println("Before selection: \n"+Arrays.toString(autokar));
+		order.selection(autokar);
+		System.out.println("After selection: \n"+Arrays.toString(autokar));
 	}
 }
