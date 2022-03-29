@@ -8,11 +8,12 @@ public class SearchLess
 	{
 		if(end>=start)
 		{
-			int mid=(end+start)/2;
+			//int mid=(end+start)/2;
+			int mid=start+(end-start)/2;
 			if(arr[mid]==data)
 				return mid;
 			else if(arr[mid]>data)
-				return binary(arr, start, mid, data);
+				return binary(arr, start, mid-1, data);
 			else
 				return binary(arr, mid+1, end, data);
 		}
@@ -29,5 +30,6 @@ public class SearchLess
 		System.out.println(less.binary(simple,0,simple.length-1,56));
 		System.out.println(less.binary(simple,0,simple.length-1,10));
 		System.out.println(less.binary(simple,0,simple.length-1,120));
+		System.out.println(less.binary(simple,0,simple.length-1,1));
 	}
 }
