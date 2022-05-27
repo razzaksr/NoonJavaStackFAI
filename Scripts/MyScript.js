@@ -19,10 +19,10 @@ var myArray=[
     }
 ]
 
-const deleting=(index)=>{
-    alert(index+" caught @ delete ")
-    myArray=myArray.filter((ele,pos)=>{
-        return pos!==index
+function deleting(index) {
+    alert(index + " caught @ delete ")
+    myArray = myArray.filter((ele, pos) => {
+        return pos !== index
     })
     listing()
 }
