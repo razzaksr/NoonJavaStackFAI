@@ -2,7 +2,7 @@ package Exception;
 
 import java.io.IOException;
 
-public class CompileTimeException {
+public class CompileTimeExceptions {
 
 	public static void main(String[] args) throws IOException, InterruptedException 
 	{
